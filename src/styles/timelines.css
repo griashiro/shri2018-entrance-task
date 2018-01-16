@@ -1,0 +1,102 @@
+.timelines {
+    width: 350%;
+    margin-left: 245px;
+
+    @media (--mobile-screen) {
+        margin-left: 180px;        
+    }
+
+    &__line-box {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        margin-bottom: 8px;
+        @media (--mobile-screen) {
+            height: 59px;
+            margin-bottom: 0;        
+            border-bottom: solid 1px var(--normalGrey);
+        }
+        box-sizing: border-box;
+    }
+    &__line {
+        display: flex;
+        flex-grow: 1;
+    }
+    &__half-hour {
+        position: relative;
+
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        width: 32px;
+        height: 28px;
+        box-sizing: border-box;
+
+        background-color: #FFF;
+        @media (--mobile-screen) {
+            height: 58px;
+        }
+    }
+    &__half-hour:first-child {
+        width: 30px;
+        @media (--mobile-screen) {
+            width: 210px;
+            margin-left: -180px;
+        }
+    }
+    &__half-hour:hover {
+        background-color: #2B50FD;
+        border-radius: 2px; 
+    }
+    &__half-hour:hover::before {
+        position: absolute;
+        top: 2px;
+        left: 50%;
+
+        font-size: 20px;
+        line-height: 22px;
+
+        color: #FFF;
+        transform: translate(-50%);
+
+        content: '+';
+
+        @media (--mobile-screen) {
+            top: 18px;
+        }
+    }
+    &__line-box:first-of-type.vline_floor-margin .vline {
+        top: -46px;
+        height: 98px;
+        @media (--mobile-screen) {
+            top: -44px;
+            height: 103px;
+        }
+    }
+    &_floor-margin {
+        margin-top: 38px;
+        @media (--mobile-screen) {
+            margin-top: 45px;        
+        }
+    }
+    &_disabled,
+    &_disabled:hover {
+        background-color: #FFF; 
+    }
+    &_disabled:hover::before {
+        content: '';
+    }
+    &_busy {
+        background-color: #D5DFE9;
+    }
+    &_busy:hover {
+        background-color: #99A9B9;
+        border-radius: 0;
+    }
+    &_busy:hover::before {
+        content: '';
+    }
+    &_disabled:hover&_busy:hover {
+        background-color: #D5DFE9;
+    }
+}

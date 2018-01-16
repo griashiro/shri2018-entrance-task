@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+@import 'styles/header.css';
+@import 'styles/meetings.css';
+@import 'styles/date.css';
+@import 'styles/calendar.css';
+@import 'styles/hoursline.css';
+@import 'styles/roomslist.css';
+@import 'styles/timelines.css';
+@import 'styles/form.css';
+@import 'styles/inputs.css';
+@import 'styles/dialog.css';
+@import 'styles/button.css';
+@import 'styles/cloud.css';
+@import 'styles/vline.css';
+
+:root {
+  --lightGrey: #f6f7f9;;
+  --darkGrey: #858e92;
+  --normalGrey: #e9ecef;
+  --hoverGrey: #d8dbe0;
+  --activeGrey: #c1c6cd;
+  --normalBlue: #007dff;
+  --hoverBlue: #0050ff;
+  --activeBlue: #0015fe;
+
+  --busyEvent: #d5dfe9;
+  --busyEventHover: #99a9b9;
+
+  --boxShadow: rgba(0, 44, 92, 0.28);
+  --darkenedBackground: rgba(0, 16, 33, 0.80);
+}
+
+@custom-media --mobile-screen (max-width: 739px);
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.form__content::-webkit-scrollbar {
+    width: 0
+}
+
+.form__content {
+    -ms-overflow-style: none;
+}

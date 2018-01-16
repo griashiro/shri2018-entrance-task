@@ -1,0 +1,20 @@
+.dialog.hidden#dialog
+    .dialog__content
+        .dialog__success.dialog_content-position.hidden#successMessage
+            .dialog__emoji-success 
+                include ../assets/emoji-success.svg
+            .dialog__title-success#successDialogTitle Встреча создана!
+            .dialog__datetime 14 декабря, 15:00—17:00
+            .dialog__place Готем · 4 этаж
+            button.button.button_rect.button_emphasis.onCloseDialog Хорошо
+        .dialog__delete.dialog_content-position.hidden#deleteMessage
+            .dialog__emoji-delete
+                include ../assets/emoji-delete.svg 
+            .dialog__title-delete 
+                | Встреча будет 
+                br
+                | удалена безвозвратно
+            .dialog__buttons-container
+                button.button.button_rect.button_right-margin.onDeleteReject Отмена
+                button.button.button_rect.onDeleteConfirm Удалить
+    .dialog__background

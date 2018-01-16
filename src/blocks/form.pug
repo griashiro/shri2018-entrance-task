@@ -1,0 +1,17 @@
+.form.hidden#form
+    .form__content
+        .form__header
+            span.form__title Новая встреча
+            button.button.button_round.onCloseForm
+                .button_close-icon
+                    include ../assets/cross.svg
+        include inputs
+    .form__footer
+        .form__footer-content
+            .form__create-buttons
+                button.button.button_rect.button_right-margin.onCloseForm Отмена
+                button.button.button_rect.button_emphasis.onShowSuccessDialog Создать встречу
+            .form__edit-buttons
+                button.button.button_rect.button_right-margin.onCloseForm Отмена
+                button.button.button_rect.button_right-margin.onShowDeleteDialog Удалить
+                button.button.button_rect.onShowSuccessSaveDialog Сохранить

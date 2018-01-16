@@ -1,0 +1,124 @@
+.form {
+    position: fixed;
+    top: 71px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+
+    background-color: #FFF;
+
+    @media (--mobile-screen) {
+        top: 48px;
+    }
+    @media (--mobile-screen) and (max-height: 320px) {
+        top: 0px;
+    } 
+
+    &__content {
+        width: 68.125%;
+        height: 100%;
+        min-width: 648px;
+        max-width: 872px;
+        padding: 0 10px;
+        margin: 0 auto;
+        overflow: scroll;
+
+        @media (--mobile-screen) {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-width: auto;
+            max-width: none;
+            padding: 0;
+            overflow-x: hidden;
+        }
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        flex-shrink: 0;
+        height: 24px;
+        padding-top: 32px;
+        margin-bottom: 20px;
+        @media (--mobile-screen) {
+            padding-top: 24px;
+            padding-left: 0;        
+            margin-bottom: 16px;
+        }
+        @media (--mobile-screen) {
+            width: 362px; 
+        }
+        @media (max-width: 400px) {
+            width: 100vw;
+            margin-left: 32px; 
+        }
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    &__header > .button {
+        padding: 0;
+        @media (--mobile-screen) {
+            display: none;        
+        }
+    }
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        z-index: 2200;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 76px;
+    
+        background-color: #FFF;
+        box-shadow: inset 0 1px 0 var(--normalGrey);
+
+        @media (--mobile-screen) {
+            height: 80px;
+        }
+    }
+    &__footer-content {
+        @media (--mobile-screen) {
+            display: flex;
+            width: 362px; 
+            .form__edit-buttons,
+            .form__create-buttons {
+                margin-left: auto;
+            }
+        }
+        @media (--mobile-screen) and (max-width: 400px) {
+            padding-right: 16px;
+        }
+    }
+    &_create {
+        .form__create-buttons {
+            display: block;
+        }
+        .form__edit-buttons {
+            display: none;
+        }
+        .inputs__delete-meeting {
+            display: none;
+        }
+    }
+    &_edit {
+        .form__create-buttons {
+            display: none;
+        }
+        .form__edit-buttons {
+            display: flex;
+            @media (--mobile-screen) {
+                button:nth-of-type(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

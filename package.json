@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "cssnano": "^3.10.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "scripts": {
+    "build": "rm -rf ./build && mkdir build && pug ./src/index.pug -o ./build && cp ./src/scripts.js ./build/scripts.js && postcss ./src/styles.css -o ./build/styles.css"
+  }
+}

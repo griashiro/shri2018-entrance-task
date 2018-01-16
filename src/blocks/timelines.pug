@@ -1,0 +1,15 @@
+.timelines#timelines
+    each floor in [Array(3), Array(4), Array(2), Array(4)]
+        .timelines__line-box.timelines_floor-margin.vline_floor-margin
+            .timelines__line
+                each _ in Array(17)
+                    .timelines__half-hour
+                    .timelines__half-hour
+                        .vline
+        each _ in floor
+            .timelines__line-box
+                .timelines__line
+                    each _ in Array(17)
+                        .timelines__half-hour
+                        .timelines__half-hour
+                            .vline

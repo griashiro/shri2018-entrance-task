@@ -1,0 +1,98 @@
+.cloud {
+    position: absolute;
+    z-index: 460;
+    top: -10px;
+    left: -10px;
+
+    width: 338px;
+    height: 113px;
+    padding: 16px;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0 1px 16px 0 var(--boxShadow);
+
+    @media (--mobile-screen) {
+        width: 360px;
+        height: 128px;        
+    }
+    @media (max-width: 370px) {
+        transform: scale(0.8);
+    }
+
+    &::before {
+        position: absolute;
+        top: 99%;
+        right: 40px;
+        border: 8px solid transparent;
+        border-top-color: #FFF;
+        content: '';
+    }
+    &__title {
+        margin-bottom: 2px;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: bold;
+        @media (--mobile-screen) {
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+    }
+    &__text {
+        font-size: 13px;
+        line-height: 17px;
+        @media (--mobile-screen) {
+            font-size: 15px;
+        }
+    }
+    &__user-content {
+        display: flex;
+        align-items: center;
+        height: 24px;
+        width: 100%;
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: 17px;
+        @media (--mobile-screen) {
+            font-size: 15px;
+        }
+    }
+    &__other-users {
+        color: var(--busyEventHover)
+    }
+    &__avatar {
+        width: 24px;
+        margin-right: 8px;
+        border-radius: 50%;
+        @media (--mobile-screen) {
+            width: 32px;
+        }
+    }
+    &__title,
+    &__text,
+    &__users {
+        max-width: 280px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        @media (--mobile-screen) {
+            top: 14px;
+            right: 14px;
+        }
+    }
+    &__button > .button {
+        padding-left: 0;
+    }
+    &__button > .button path {
+        fill: rgba(0, 0, 0, 0.43);
+    }
+    &:hover .button path {
+        fill: #000;
+    }
+}

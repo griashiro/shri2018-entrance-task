@@ -1,0 +1,61 @@
+.inputs
+    .inputs__group
+        .inputs__subject
+            span.inputs__clear-icon
+                include ../assets/cross.svg
+            label.inputs__label(for="subject") Тема
+            input.inputs__subject-input.inputs_style#subject(type="text" name="subject" placeholder="О чём будете говорить?")
+        .inputs__datetime
+            .inputs__date
+                span.inputs__calendar-icon
+                    include ../assets/calendar.svg
+                label.inputs__label(for="date") Дата
+                input.inputs__date-input.inputs_style#date(type="text" name="date")
+            .inputs__time
+                .inputs__time-start
+                    label.inputs__label(for="time-start") Начало
+                    input.inputs__time-start-input.inputs_style#time-start(type="text" name="time-start")
+                .inputs__time-delimeter — 
+                .inputs__time-end
+                    label.inputs__label(for="time-end") Конец
+                    input.inputs__time-end-input.inputs_style#time-end(type="text" name="time-start")
+    .inputs__delimeter
+    .inputs__group
+        .inputs__search
+            span.inputs__clear-icon
+                include ../assets/cross.svg
+            label.inputs__label(for="search") Участники
+            input.inputs__search-input.inputs_style.onShowSearch#search(type="text" name="search" placeholder="Например, Аркадий Волож")
+            .inputs__added
+                each personName in ['Люк Скайокер', 'Хан Соло', 'Обиван Кеноби', 'Принецесса Лея', 'Чуббака']
+                    .inputs__person-container
+                        .inputs__added-person
+                            img.inputs__added-person-avatar(src="http://via.placeholder.com/50x50")
+                            .inputs__added-person-name= personName
+                            span.inputs__remove-person-icon
+                                include ../assets/cross.svg
+            .inputs__search-results.hidden#searchResult
+                each personName, index in ['Люк Скайокер', 'Хан Соло', 'Обиван Кеноби', 'Принецесса Лея', 'Чуббака']
+                    .inputs__finded-person
+                        img.inputs__finded-person-avatar(src="http://via.placeholder.com/50x50")
+                        span.inputs__finded-person-name= personName
+                        span.inputs__finded-person-floor= index
+            .inputs__delimeter-persons
+        .inputs__room
+            .inputs__label Рекомендуемые переговорки
+            .inputs__one-room.inputs_style.inputs_one-room-selected
+                span.inputs__room-time 16:00—16:30
+                span.inputs__room-name-and-floor Выбранная переговорка
+                span.inputs__remove-room-icon
+                    include ../assets/cross.svg
+            each val in [['16:00—16:30', 'Тёмная башня · 1 этаж'], ['16:00—16:30', 'Звезда смерти · 2 этаж'], ['16:00—16:30', 'Казино Роял · 5 этаж']]
+                .inputs__one-room.inputs_style
+                    span.inputs__room-time= val[0]
+                    span.inputs__room-name-and-floor= val[1]
+                    span.inputs__remove-room-icon
+                        include ../assets/cross.svg
+    .inputs__delete-meeting
+        .inputs__delimeter-remove-top
+        .inputs__delete-meeting-button.onShowDeleteDialog
+            span Удалить встречу
+        .inputs__delimeter-remove-bottom 

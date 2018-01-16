@@ -1,0 +1,8 @@
+.roomslist#roomslist
+    each floor, index in [['Ржавый Фред', 'Прачечная', 'Желтый дом', 'Оранжевый тюльпан'], ['Джокер', 'Мариванна', 'Тонкий Боб', 'Чёрная вдова', 'Белорусский ликёр'], ['Зеленые человечки', 'Yellow Submarine', 'Оранжевое настроение'], ['Три поросенка', 'Два ствола', 'Камчатка', 'У Стасяна', 'Стоунхэнж']]
+        .roomslist__floor= 'Этаж N' 
+        each roomName in floor
+            .roomslist__room 
+                .roomslist__name
+                    span= roomName
+                .roomslist__capacity 4-6 человек

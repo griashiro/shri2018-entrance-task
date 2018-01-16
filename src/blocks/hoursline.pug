@@ -1,0 +1,11 @@
+.hoursline
+    .hoursline__content
+        .hoursline__hours#hours
+            .hoursline__current
+                span.hoursline__now 11:05
+                .hoursline__line
+            .hoursline__one-hour 8:00
+            - for (let i = 9; i < 24; ++i)
+                .hoursline__one-hour= i
+            .hoursline__one-hour 0:00
+            .hoursline__one-hour
