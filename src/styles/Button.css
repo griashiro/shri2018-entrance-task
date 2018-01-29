@@ -1,0 +1,88 @@
+.button {
+    border: none;
+    color: black;
+    background-color: var(--normalGrey);
+    cursor: pointer;
+
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        background-color: var(--hoverGrey);
+    }
+    
+    &:active {
+        background-color: var(--activeGrey);
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:focus,
+    &:disabled:active {
+        color: var(--disabledText);
+        background: var(--disabledBackground);
+    }
+    &_rect {
+        height: 36px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 13px;
+        border-radius: 4px;
+        @media (--mobile-screen) {
+            font-size: 15px;
+            height: 44px;    
+        }
+    }
+    &_round {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        padding-left: 2px;
+        border-radius: 50%;
+        @media (--mobile-screen) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &_emphasis {
+        color: #FFF;
+        background-color: var(--normalBlue);
+        &:hover {
+            background-color: var(--hoverBlue);
+        }
+        &:active {
+            background-color: var(--activeBlue);
+        }
+    }
+    &_rotated {
+        transform: rotate(180deg);
+    }
+    &_right-margin {
+        margin-right: 16px;
+    }
+    &__close-icon {
+        position: absolute;
+        width: 12px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        polygon {
+            fill: #888;
+        }
+    }
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin-left: 1px;
+        @media (--mobile-screen) {
+            transform: translate(-50%,-50%) scale(1.5);
+        }
+    }
+    &__pencil {
+        @media (--mobile-screen) {
+            transform: scale(1.5);
+        }
+    }
+}

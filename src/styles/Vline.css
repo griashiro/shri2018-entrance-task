@@ -1,0 +1,19 @@
+.vline {
+    position: absolute;
+    width: 1px;
+    height: 52px;
+    background-color: rgba(19,100,205,0.10);
+
+    @media (--mobile-screen) {
+        height: 59px;
+    }
+
+    &_floor-margin .vline {
+        top: -30px;
+        height: 82px;
+        @media (--mobile-screen) {
+            top: -45px;
+            height: 104px;
+        }
+    }
+}

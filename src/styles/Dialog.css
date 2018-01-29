@@ -1,0 +1,94 @@
+.dialog {
+    &__background {
+        position: fixed;
+        z-index: 3000;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    
+        background-color: rgba(0, 16, 33, 0.40);;
+
+        @media (--mobile-screen) {
+            background-color: var(--darkenedBackground);
+        }
+    }
+    &__content {
+        position: fixed;
+        z-index: 3100;
+        top: 50%;
+        left: 50%;
+        width: 444px;
+
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 16px 0 var(--boxShadow);
+        transform: translate(-50%, -50%);
+
+        @media (--mobile-screen) {
+            top: auto;
+            bottom: 24px;
+            width: 360px;   
+            transform: translate(-50%);
+        }
+    }
+    &_content-position {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__success {
+        height: 252px;
+        @media (--mobile-screen) {
+            height: 267px;    
+        }
+    }
+    &__emoji-success {
+        margin-bottom: -10px;
+        margin-top: -25px;
+        transform: scale(0.5);
+        text {
+            font-size: 70px;
+        }
+    }
+    &__title-success {
+        margin-bottom: 8px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+    &__datetime {
+        margin-bottom: 6px;
+        font-size: 15px;
+        line-height: 17px;
+    }
+    &__place {
+        margin-bottom: 24px;
+        font-size: 15px;
+        line-height: 17px;
+        white-space: pre;
+    }
+    &__delete {
+        height: 228px;
+        @media (--mobile-screen) {
+            height: 244px;    
+        }
+    }
+    &__emoji-delete {
+        margin-top: -25px;
+        margin-bottom: -4px;
+        transform: scale(0.5);
+        text {
+            font-size: 82px;
+        }
+    }
+    &__title-delete {
+        margin-bottom: 24px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+}

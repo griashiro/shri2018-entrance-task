@@ -1,0 +1,12 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 540px) {
+    transform: scale(0.6);
+  }
+  &__tip {
+    width: 500px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+@import 'styles/Header.css';
+@import 'styles/Meetings.css';
+@import 'styles/Date.css';
+@import 'styles/Calendar.css';
+@import 'styles/Hoursline.css';
+@import 'styles/Roomslist.css';
+@import 'styles/Timelines.css';
+@import 'styles/Form.css';
+@import 'styles/Inputs.css';
+@import 'styles/Dialog.css';
+@import 'styles/button.css';
+@import 'styles/Cloud.css';
+@import 'styles/Vline.css';
+@import 'styles/Spinner.css';
+@import 'styles/Error.css';
+@import 'styles/Animations.css';
+
+:root {
+  --lightGrey: #f6f7f9;;
+  --darkGrey: #858e92;
+  --normalGrey: #e9ecef;
+  --hoverGrey: #d8dbe0;
+  --activeGrey: #c1c6cd;
+  --normalBlue: #007dff;
+  --hoverBlue: #0050ff;
+  --activeBlue: #0015fe;
+
+  --busyEvent: #d5dfe9;
+  --busyEventHover: #99a9b9;
+
+  --disabledText: rgba(0, 0, 0, 0.20);
+  --disabledBackground: #e2e5e8;
+
+  --boxShadow: rgba(0, 44, 92, 0.28);
+  --darkenedBackground: rgba(0, 16, 33, 0.80);
+}
+
+@custom-media --mobile-screen (max-width: 739px);
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;;
+}
+
+svg {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.non-visible {
+  visibility: hidden;
+}
+
+.form__content::-webkit-scrollbar {
+  width: 0
+}
+
+.form__content {
+  -ms-overflow-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
